@@ -11,8 +11,8 @@ RUN apk add --update --no-cache openssh \
   && rm -rf /var/cache/apk/*
 
 # Finishing
-RUN sed 's/127.0.0.1:9000/9000/g' /etc/php5/php-fpm.conf \
-  mkdir -p /var/www/html
+RUN sed -i 's/127.0.0.1:9000/9000/g' /etc/php5/php-fpm.conf \
+  && mkdir -p /var/www/html
 
 # default sh
 WORKDIR /var/www/html
