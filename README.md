@@ -1,6 +1,6 @@
 # PHP FPM ALPINE ![Build Status](https://travis-ci.org/goeroeku/php56-fpm-alpine.svg?branch=master)
 
-Docker image 
+Docker image old php (php 5.6) base on alpine
 
 ## How to Use
 
