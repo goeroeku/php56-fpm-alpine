@@ -10,7 +10,14 @@ RUN apk add --update --no-cache openssh \
   && rm -rf /tmp/pear \
   && rm -rf /var/cache/apk/*
 
-# Create public html directory
-RUN mkdir -p /var/www/html/
+# Finishing
+RUN sed 's/127.0.0.1:9000/9000/g' /etc/php5/php-fpm.conf \
+  mkdir -p /var/www/html
+
+# default sh
+WORKDIR /var/www/html
+
+# Run service
+CMD ["php-fpm", "-F"]
 
 EXPOSE 9000
