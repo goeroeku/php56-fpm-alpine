@@ -19,6 +19,7 @@ PHP FPM with mysqli and pdo base on Alpine
 
 ## Extra PHP modules installed
 
+- php5-json
 - php5-gd
 - php5-mcrypt
 - php5-intl
